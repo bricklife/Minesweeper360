@@ -35,15 +35,13 @@ struct ImmersiveView: View {
             guard !game.isCompleted else { return }
             guard !game.isFailed else { return }
             
-            let p = value.entity.name.split(separator: "-").compactMap { Int($0) }
-            if p.count == 2 {
-                do {
-                    try game.openRecursively(x: p[0], y: p[1])
-                } catch Game.Error.failed {
-                    game.openAllMines()
-                } catch {
-                    print(error)
-                }
+            guard let p = Position(name: value.entity.name) else { return }
+            do {
+                try game.openRecursively(x: p.x, y: p.y)
+            } catch Game.Error.failed {
+                game.openAllMines()
+            } catch {
+                print(error)
             }
         })
     }
@@ -73,7 +71,7 @@ struct ImmersiveView: View {
             e.components.set(InputTargetComponent())
             e.components.set(CollisionComponent(shapes: [.generateBox(size: .one)]))
             e.transform = transform
-            e.name = "\(p.x)-\(p.y)"
+            e.name = p.name
             root.addChild(e)
             
             if game.field.hasMine(x: p.x, y: p.y) {
@@ -94,24 +92,18 @@ struct ImmersiveView: View {
     
     func update(content: inout RealityViewContent) {
         for p in game.field.openPositions {
-            content.entities.first?.find(position: p)?.removeFromParent()
+            content.entities.first?.findEntity(named: p.name)?.removeFromParent()
         }
         if game.isGameover {
             print("gameover")
             for p in game.field.allCellPositions {
-                guard let cell = content.entities.first?.find(position: p) else { continue }
+                guard let cell = content.entities.first?.findEntity(named: p.name) else { continue }
                 cell.components.remove(HoverEffectComponent.self)
                 if game.field.hasMine(x: p.x, y: p.y) {
                     cell.removeFromParent()
                 }
             }
         }
-    }
-}
-
-private extension Entity {
-    func find(position: Position) -> Entity? {
-        return findEntity(named: "\(position.x)-\(position.y)")
     }
 }
 
