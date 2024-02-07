@@ -1,0 +1,15 @@
+{
+  "pathsToIds" : {
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/1.usda" : "04B4B2D2-E790-40F0-8E43-352AA239C58A",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/2.usda" : "0779AA9F-3B2E-4CD4-A257-496F9A957D5C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/3.usda" : "3FE6539D-26EE-4579-83EF-FCFB898DF8B4",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/4.usda" : "04294D56-032E-4919-91AD-62D6202DBC2F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/5.usda" : "AED2C3D1-CE97-4C4E-9A8E-162AEF5F4172",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/6.usda" : "88125D8A-23E5-40D8-A573-DDDE79995AAF",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/7.usda" : "7F8A013C-E529-4E53-89F5-0B960C69089F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/8.usda" : "FF7C9362-B445-4255-AEBD-C219A24A5501",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Cube.usda" : "57F1E007-CDCD-4C88-8FE3-F8302789653F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "66168B71-AB05-424E-8B6C-D33D6E61B08F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Mine.usda" : "55766072-669B-4547-8E79-DAD4CE760236"
+  }
+}

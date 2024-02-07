@@ -1,0 +1,119 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Sphere", "Cylinder_1", "Cylinder_2", "Material", "Cylinder_3", "CD8816D4_DE3B_422F_A647_B6620B844C13"]
+    def Xform "Group" (
+        active = true
+    )
+    {
+        float3 xformOp:scale = (10, 10, 10)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Sphere" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+        )
+        {
+            rel material:binding = </Root/Group/Material> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double radius = 0.03
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "Cylinder_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+        )
+        {
+            uniform token axis = "X"
+            double height = 0.08
+            rel material:binding = </Root/Group/Material> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double radius = 0.005
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "Cylinder_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 0.08
+            rel material:binding = </Root/Group/Material> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double radius = 0.005
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Material "Material" (
+            active = true
+        )
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            prepend token outputs:surface.connect = </Root/Group/Material/UsdPreviewSurface.outputs:surface>
+
+            def Shader "UsdPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0) (
+                    colorSpace = "Input - Texture - sRGB - sRGB"
+                )
+                color3f inputs:diffuseColor.connect = None
+                float inputs:metallic = 0
+                token outputs:surface
+            }
+        }
+
+        def Cylinder "Cylinder_3" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 0, 0)
+            }
+        )
+        {
+            uniform token axis = "Z"
+            double height = 0.08
+            rel material:binding = </Root/Group/Material> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double radius = 0.005
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+}
+

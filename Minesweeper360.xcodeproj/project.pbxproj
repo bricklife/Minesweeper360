@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB1A3CB62B73D52000F2C293 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CB1A3CB52B73D52000F2C293 /* RealityKitContent */; };
+		CB1A3CB82B73D52000F2C293 /* Minesweeper360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CB72B73D52000F2C293 /* Minesweeper360App.swift */; };
+		CB1A3CBA2B73D52000F2C293 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CB92B73D52000F2C293 /* ContentView.swift */; };
+		CB1A3CBC2B73D52000F2C293 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CBB2B73D52000F2C293 /* ImmersiveView.swift */; };
+		CB1A3CBE2B73D52300F2C293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1A3CBD2B73D52300F2C293 /* Assets.xcassets */; };
+		CB1A3CC12B73D52300F2C293 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1A3CC02B73D52300F2C293 /* Preview Assets.xcassets */; };
+		CB1A3CCB2B73D55B00F2C293 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CC82B73D55B00F2C293 /* Field.swift */; };
+		CB1A3CCC2B73D55B00F2C293 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CC92B73D55B00F2C293 /* Game.swift */; };
+		CB1A3CCD2B73D55B00F2C293 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A3CCA2B73D55B00F2C293 /* Position.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB1A3CB02B73D52000F2C293 /* Minesweeper360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper360.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1A3CB42B73D52000F2C293 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		CB1A3CB72B73D52000F2C293 /* Minesweeper360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minesweeper360App.swift; sourceTree = "<group>"; };
+		CB1A3CB92B73D52000F2C293 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB1A3CBB2B73D52000F2C293 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		CB1A3CBD2B73D52300F2C293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB1A3CC02B73D52300F2C293 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB1A3CC22B73D52300F2C293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB1A3CC82B73D55B00F2C293 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		CB1A3CC92B73D55B00F2C293 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CB1A3CCA2B73D55B00F2C293 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB1A3CAD2B73D52000F2C293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1A3CB62B73D52000F2C293 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB1A3CA72B73D52000F2C293 = {
+			isa = PBXGroup;
+			children = (
+				CB1A3CB22B73D52000F2C293 /* Minesweeper360 */,
+				CB1A3CB32B73D52000F2C293 /* Packages */,
+				CB1A3CB12B73D52000F2C293 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB1A3CB12B73D52000F2C293 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A3CB02B73D52000F2C293 /* Minesweeper360.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB1A3CB22B73D52000F2C293 /* Minesweeper360 */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A3CB72B73D52000F2C293 /* Minesweeper360App.swift */,
+				CB1A3CB92B73D52000F2C293 /* ContentView.swift */,
+				CB1A3CBB2B73D52000F2C293 /* ImmersiveView.swift */,
+				CB1A3CC92B73D55B00F2C293 /* Game.swift */,
+				CB1A3CC82B73D55B00F2C293 /* Field.swift */,
+				CB1A3CCA2B73D55B00F2C293 /* Position.swift */,
+				CB1A3CBD2B73D52300F2C293 /* Assets.xcassets */,
+				CB1A3CC22B73D52300F2C293 /* Info.plist */,
+				CB1A3CBF2B73D52300F2C293 /* Preview Content */,
+			);
+			path = Minesweeper360;
+			sourceTree = "<group>";
+		};
+		CB1A3CB32B73D52000F2C293 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A3CB42B73D52000F2C293 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		CB1A3CBF2B73D52300F2C293 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A3CC02B73D52300F2C293 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB1A3CAF2B73D52000F2C293 /* Minesweeper360 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1A3CC52B73D52300F2C293 /* Build configuration list for PBXNativeTarget "Minesweeper360" */;
+			buildPhases = (
+				CB1A3CAC2B73D52000F2C293 /* Sources */,
+				CB1A3CAD2B73D52000F2C293 /* Frameworks */,
+				CB1A3CAE2B73D52000F2C293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Minesweeper360;
+			packageProductDependencies = (
+				CB1A3CB52B73D52000F2C293 /* RealityKitContent */,
+			);
+			productName = Minesweeper360;
+			productReference = CB1A3CB02B73D52000F2C293 /* Minesweeper360.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB1A3CA82B73D52000F2C293 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					CB1A3CAF2B73D52000F2C293 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = CB1A3CAB2B73D52000F2C293 /* Build configuration list for PBXProject "Minesweeper360" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB1A3CA72B73D52000F2C293;
+			productRefGroup = CB1A3CB12B73D52000F2C293 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB1A3CAF2B73D52000F2C293 /* Minesweeper360 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB1A3CAE2B73D52000F2C293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1A3CC12B73D52300F2C293 /* Preview Assets.xcassets in Resources */,
+				CB1A3CBE2B73D52300F2C293 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB1A3CAC2B73D52000F2C293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1A3CBA2B73D52000F2C293 /* ContentView.swift in Sources */,
+				CB1A3CCC2B73D55B00F2C293 /* Game.swift in Sources */,
+				CB1A3CCD2B73D55B00F2C293 /* Position.swift in Sources */,
+				CB1A3CB82B73D52000F2C293 /* Minesweeper360App.swift in Sources */,
+				CB1A3CCB2B73D55B00F2C293 /* Field.swift in Sources */,
+				CB1A3CBC2B73D52000F2C293 /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CB1A3CC32B73D52300F2C293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		CB1A3CC42B73D52300F2C293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		CB1A3CC62B73D52300F2C293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Minesweeper360/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bricklife.Minesweeper360;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		CB1A3CC72B73D52300F2C293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Minesweeper360/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bricklife.Minesweeper360;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB1A3CAB2B73D52000F2C293 /* Build configuration list for PBXProject "Minesweeper360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1A3CC32B73D52300F2C293 /* Debug */,
+				CB1A3CC42B73D52300F2C293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1A3CC52B73D52300F2C293 /* Build configuration list for PBXNativeTarget "Minesweeper360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1A3CC62B73D52300F2C293 /* Debug */,
+				CB1A3CC72B73D52300F2C293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB1A3CB52B73D52000F2C293 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CB1A3CA82B73D52000F2C293 /* Project object */;
+}
