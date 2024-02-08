@@ -34,33 +34,35 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Spacer()
             VStack(spacing: 50) {
                 Text(title)
                     .font(.largeTitle)
+                    .padding()
                 
                 Toggle(immersiveSpaceIsShown ? "Retry" : "Play", isOn: $showImmersiveSpace)
                     .toggleStyle(.button)
                 
-                @Bindable var setting = setting
-                VStack {
-                    Text(String(format: "Scale: %.1f", setting.scale))
-                    
-                    Slider(value: $setting.scale, in: 0.1...2.0)
-                        .frame(width: 200)
-                }
-                
-                Button("Switch to " + (setting.immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
-                    if setting.immersionStyle is MixedImmersionStyle {
-                        setting.immersionStyle = .full
-                    } else {
-                        setting.immersionStyle = .mixed
+                GroupBox {
+                    @Bindable var setting = setting
+                    VStack {
+                        Text(String(format: "Scale: %.1f", setting.scale))
+                        
+                        Slider(value: $setting.scale, in: 0.1...2.0)
                     }
+                    .padding()
+                    
+                    Button("Switch to " + (setting.immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
+                        if setting.immersionStyle is MixedImmersionStyle {
+                            setting.immersionStyle = .full
+                        } else {
+                            setting.immersionStyle = .mixed
+                        }
+                    }
+                    .padding()
+                    .disabled(!immersiveSpaceIsShown)
                 }
-                .disabled(!immersiveSpaceIsShown)
+                .frame(width: 400)
             }
-            .frame(minWidth: 300)
-            .padding(100)
             .glassBackgroundEffect(
                 in: RoundedRectangle(
                     cornerRadius: 32,
