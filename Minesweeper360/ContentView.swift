@@ -9,16 +9,14 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
-    
-    @Binding var immersionStyle: ImmersionStyle
+    @Environment(Setting.self) var setting
+    @Environment(Game.self) var game
     
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
     
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
-    @Environment(Game.self) var game
     
     var title: String {
         if immersiveSpaceIsShown {
@@ -37,23 +35,31 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            VStack {
+            VStack(spacing: 50) {
                 Text(title)
                     .font(.largeTitle)
                 
                 Toggle(immersiveSpaceIsShown ? "Retry" : "Play", isOn: $showImmersiveSpace)
                     .toggleStyle(.button)
-                    .padding()
                 
-                Button("Switch to " + (immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
-                    if immersionStyle is MixedImmersionStyle {
-                        immersionStyle = .full
+                @Bindable var setting = setting
+                VStack {
+                    Text(String(format: "Scale: %.1f", setting.scale))
+                    
+                    Slider(value: $setting.scale, in: 0.1...2.0)
+                        .frame(width: 200)
+                }
+                
+                Button("Switch to " + (setting.immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
+                    if setting.immersionStyle is MixedImmersionStyle {
+                        setting.immersionStyle = .full
                     } else {
-                        immersionStyle = .mixed
+                        setting.immersionStyle = .mixed
                     }
                 }
                 .disabled(!immersiveSpaceIsShown)
             }
+            .frame(minWidth: 300)
             .padding(100)
             .glassBackgroundEffect(
                 in: RoundedRectangle(

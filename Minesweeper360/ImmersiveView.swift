@@ -15,6 +15,7 @@ private let HEIGHT = 10
 private let R: Float = 3
 
 struct ImmersiveView: View {
+    @Environment(Setting.self) var setting
     @Environment(Game.self) var game
     
     var body: some View {
@@ -91,6 +92,9 @@ struct ImmersiveView: View {
     }
     
     func update(content: inout RealityViewContent) {
+        let scale = setting.scale
+        content.entities.first?.transform = Transform(scale: .init(x: scale, y: scale, z: scale))
+        
         for p in game.field.openPositions {
             content.entities.first?.findEntity(named: p.name)?.removeFromParent()
         }
