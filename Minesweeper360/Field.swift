@@ -15,6 +15,10 @@ struct Field {
     private(set) var minePositions: Set<Position>
     private(set) var openPositions: Set<Position>
     
+    var closedCellPositions: Set<Position> {
+        return allCellPositions.subtracting(openPositions)
+    }
+    
     init(width: Int, height: Int, loopX: Bool = false, loopY: Bool = false) {
         self.width = width
         self.height = height

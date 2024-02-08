@@ -100,11 +100,12 @@ struct ImmersiveView: View {
         }
         if game.isGameover {
             print("gameover")
-            for p in game.field.allCellPositions {
+            for p in game.field.closedCellPositions {
                 guard let cell = content.entities.first?.findEntity(named: p.name) else { continue }
-                cell.components.remove(HoverEffectComponent.self)
                 if game.field.hasMine(x: p.x, y: p.y) {
                     cell.removeFromParent()
+                } else {
+                    cell.components.remove(HoverEffectComponent.self)
                 }
             }
         }
