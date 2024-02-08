@@ -28,7 +28,7 @@ struct ContentView: View {
                 return "Playing..."
             }
         } else {
-            return "Minesweeper360"
+            return "Minesweeper 360"
         }
     }
     
