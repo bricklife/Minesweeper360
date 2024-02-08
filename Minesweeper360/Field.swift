@@ -13,10 +13,10 @@ struct Field {
     
     let allCellPositions: Set<Position>
     private(set) var minePositions: Set<Position>
-    private(set) var openPositions: Set<Position>
+    private(set) var openCellPositions: Set<Position>
     
     var closedCellPositions: Set<Position> {
-        return allCellPositions.subtracting(openPositions)
+        return allCellPositions.subtracting(openCellPositions)
     }
     
     init(width: Int, height: Int, loopX: Bool = false, loopY: Bool = false) {
@@ -34,7 +34,7 @@ struct Field {
         )
         
         self.minePositions = .init(minimumCapacity: width * height)
-        self.openPositions = .init(minimumCapacity: width * height)
+        self.openCellPositions = .init(minimumCapacity: width * height)
     }
     
     func isValid(x: Int, y: Int) -> Bool {
@@ -73,16 +73,16 @@ struct Field {
     mutating func open(x: Int, y: Int) throws {
         guard isValid(x: x, y: y) else { throw Error.outOfRange }
         guard !isOpen(x: x, y: y) else { throw Error.alreadyOpened }
-        openPositions.insert(.init(x: x, y: y))
+        openCellPositions.insert(.init(x: x, y: y))
     }
     
     func isOpen(x: Int, y: Int) -> Bool {
-        return openPositions.contains(.init(x: x, y: y))
+        return openCellPositions.contains(.init(x: x, y: y))
     }
     
     mutating func reset() {
         minePositions.removeAll()
-        openPositions.removeAll()
+        openCellPositions.removeAll()
     }
 }
 

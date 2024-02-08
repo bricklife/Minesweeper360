@@ -95,7 +95,7 @@ struct ImmersiveView: View {
         let scale = setting.scale
         content.entities.first?.transform = Transform(scale: .init(x: scale, y: scale, z: scale))
         
-        for p in game.field.openPositions {
+        for p in game.field.openCellPositions {
             content.entities.first?.findEntity(named: p.name)?.removeFromParent()
         }
         if game.isGameover {

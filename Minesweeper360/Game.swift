@@ -19,11 +19,11 @@ import Observation
     }
     
     var numOfOpenCells: Int {
-        return field.openPositions.count
+        return field.openCellPositions.count
     }
     
     var isFailed: Bool {
-        return field.minePositions.contains(where: field.openPositions.contains(_:))
+        return field.minePositions.contains(where: field.openCellPositions.contains(_:))
     }
     
     var isCompleted: Bool {
