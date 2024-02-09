@@ -34,42 +34,44 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            VStack(spacing: 50) {
+            VStack {
                 Text(title)
                     .font(.largeTitle)
-                    .padding()
-                
+                Spacer()
                 Toggle(immersiveSpaceIsShown ? "Retry" : "Play", isOn: $showImmersiveSpace)
                     .toggleStyle(.button)
-                
-                GroupBox {
-                    @Bindable var setting = setting
-                    VStack {
-                        Text(String(format: "Scale: %.1f", setting.scale))
-                        
-                        Slider(value: $setting.scale, in: 0.1...2.0)
-                    }
-                    .padding()
-                    
-                    Button("Switch to " + (setting.immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
-                        if setting.immersionStyle is MixedImmersionStyle {
-                            setting.immersionStyle = .full
-                        } else {
-                            setting.immersionStyle = .mixed
-                        }
-                    }
-                    .padding()
-                    .disabled(!immersiveSpaceIsShown)
-                }
-                .frame(width: 400)
+                Spacer()
             }
-            .glassBackgroundEffect(
-                in: RoundedRectangle(
-                    cornerRadius: 32,
-                    style: .continuous
-                )
-            )
+            .padding()
+            
+            VStack {
+                @Bindable var setting = setting
+                VStack {
+                    Text(String(format: "Scale: %.1f", setting.scale))
+                    
+                    Slider(value: $setting.scale, in: 0.1...2.0)
+                }
+                .padding()
+                
+                Button("Switch to " + (setting.immersionStyle is MixedImmersionStyle ? "Full" : "Mixed")) {
+                    if setting.immersionStyle is MixedImmersionStyle {
+                        setting.immersionStyle = .full
+                    } else {
+                        setting.immersionStyle = .mixed
+                    }
+                }
+                .disabled(!immersiveSpaceIsShown)
+            }
+            .padding()
+            .background(.fill.quinary)
         }
+        .frame(width: 500, height: 400)
+        .glassBackgroundEffect(
+            in: RoundedRectangle(
+                cornerRadius: 32,
+                style: .continuous
+            )
+        )
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {

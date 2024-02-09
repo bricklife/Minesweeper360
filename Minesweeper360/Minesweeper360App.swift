@@ -24,6 +24,7 @@ struct MineSweeper360App: App {
                 .environment(setting)
                 .environment(game)
         }
+        .windowResizability(.contentSize)
         .windowStyle(.plain)
         
         ImmersiveSpace(id: "ImmersiveSpace") {
