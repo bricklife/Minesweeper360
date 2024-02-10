@@ -66,12 +66,6 @@ struct ContentView: View {
             .background(.fill.quinary)
         }
         .frame(width: 500, height: 400)
-        .glassBackgroundEffect(
-            in: RoundedRectangle(
-                cornerRadius: 32,
-                style: .continuous
-            )
-        )
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
