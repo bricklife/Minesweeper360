@@ -23,6 +23,13 @@ struct MineSweeper360App: App {
             ContentView()
                 .environment(setting)
                 .environment(game)
+                .onAppear {
+                    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                        return
+                    }
+                        
+                    windowScene.requestGeometryUpdate(.Vision(resizingRestrictions: UIWindowScene.ResizingRestrictions.none))
+                }
         }
         .windowResizability(.contentSize)
         
